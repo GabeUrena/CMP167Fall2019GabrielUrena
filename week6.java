@@ -35,16 +35,19 @@ System.out.println("The sum of the range between the two numbers is " + sum);
 System.out.println("\nEnter a number to get the average of its range to 1:");
 	
 	n = input.nextInt();
+	int x = n;
 	sum = 0;
-	int n1 = n - 2;
+	double average;
 	
 	for (int i = 1; i <= n; ++i) {
-		n = n - 1;
-		sum = sum + n;
+		sum = sum + x;
+		x = x - 1;
 	}
-	sum = sum - 1;
-	int average = sum / n1;
-System.out.println("The average of the range is " + average);
+	
+	average = sum / n;
+	
+System.out.println("The average from 1 to your number is " + average);
+	
 	
 	
 	
