@@ -1,9 +1,11 @@
 public class Company {
+	//Attributes
 	private String name;
 	private String owner;
 	private double budget;
 	private int Employees;
 
+	//Constructors
 	public Company() {
 		this.name = "";
 		this.owner = "";
@@ -24,7 +26,7 @@ public class Company {
 		this.budget = 1000.0;
 		this.Employees = 5;
 }
-
+	//Setters
 	public void setName(String n) {
 		this.name = n;
 }
@@ -41,6 +43,7 @@ public class Company {
 		this.Employees = nEmp;
 }
 
+	//Getters
 	public String getName() {
 		return this.name;
 }
@@ -57,6 +60,7 @@ public class Company {
 		return this.Employees;
 }
 
+	//Equals
 	public boolean equals(Object mObject) {
 		if(this == mObject)
 			return true;
@@ -74,7 +78,7 @@ public class Company {
 	}
 	return false;
 }
-
+	//toString
 	public String toString() {
 		return "Company:name" + getName() + "Owner" + getOwner() + "Budget" + getBudget() + "Employees" + getNumEmployees();
 }
