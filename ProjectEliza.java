@@ -30,11 +30,14 @@ while(!(goodbye.equalsIgnoreCase("No"))) {
 	    String firstWord = result[0];
 	    String lastWord = result[result.length - 1];
 	    lastWord = lastWord.substring(0, lastWord.length() - 1);
+	    
+	    if(firstWord.substring(0, firstWord.length() - 1).equals(lastWord)) {
+			firstWord = lastWord;
+		}
+	    
 	    String lastChar =  response.substring(response.length() - 1); 
 	exit = firstWord;
 	    
-	    
-	
 	Statement(firstWord, lastWord, lastChar,exit);
 	exit = firstWord;
 	
@@ -47,9 +50,7 @@ while(!(goodbye.equalsIgnoreCase("No"))) {
 }
 
 public static void Statement(String firstWord, String lastWord, String lastChar, String exit) {
-	
-	
-	
+
 		//Getting random number to pick a random statement or question.
 		Random randGen;
 		int num;
@@ -68,19 +69,20 @@ public static void Statement(String firstWord, String lastWord, String lastChar,
 				questions[1] = "Want to talk about " + firstWord + " and " + lastWord + "?";
 				questions[2] =	"Is " + firstWord + " and " + lastWord + " important to you?";
 	
-			// printing responses
+		// printing responses
 				if(!firstWord.equalsIgnoreCase("exit")) {
+					
+					}
 				if(lastChar.equals("?")){
 					System.out.println(questions[num]);
 				
 				} else if(lastChar.equals("!")) {
 					System.out.print("WOW! Dramatic! ");
+					
 					System.out.println(statements[num]);
 				
 				}else {
 					System.out.println(statements[num]);
 				}
 				}
-	
-}
 }
